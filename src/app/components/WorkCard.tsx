@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 type Work = {
   title: string;
@@ -6,7 +7,7 @@ type Work = {
   imageUrl: string;
   url?: string;
   isModal?: boolean;
-  [key: string]: any;
+  [key: string]: string | boolean | undefined;
 };
 
 type WorkCardProps = {
@@ -29,10 +30,11 @@ export default function WorkCard({ work, onModalOpen }: WorkCardProps) {
       onClick={handleClick}
     >
       <div className="relative w-full h-44 mb-4">
-        <img
+        <Image
           src={work.imageUrl}
           alt={work.title}
-          className="w-full h-44 object-cover rounded-md"
+          fill
+          className="object-cover rounded-md"
         />
         {/* Overlay */}
         {(work.isModal || work.url) && (
