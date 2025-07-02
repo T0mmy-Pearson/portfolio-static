@@ -10,6 +10,12 @@ export default function Carousel() {
   const [direction, setDirection] = useState(0);
 
   const works = [
+    {
+      title:"WIP - projectpartnership",
+      description: "State site design for an energy cooperative based in Aberdeen. Built in React with pure CSS and Javascript.",
+      imageUrl: "/pp.png",
+      url: "https://projectpartnership.netlify.app/",
+    },
      {
       title: "CapCheck",
       description: "From the final group project on the Northcoders' bootcamp, CapCheck is a comprehensive mushroom identification app featuring an interactive map with real-time sighting locations, rainfall overlays, and searchable species markers, plus a database of over 250 mushrooms with advanced filtering by edibility and season. The app includes personalized user profiles with photo uploads, discovery tracking, and achievement systems, all built with a mobile-first design supporting both iOS and Android platforms.",
